@@ -1,6 +1,7 @@
 # Exchange-Online-Admin
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+<img width="817" height="371" alt="image" src="https://github.com/user-attachments/assets/23d01c92-e3d7-44ff-89d5-dea607781ff0" />
+/>
 </p>
 
 <h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
