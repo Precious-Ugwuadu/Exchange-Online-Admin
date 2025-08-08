@@ -1,7 +1,7 @@
 # Exchange-Online-Admin
 <p align="center">
 <img width="817" height="371" alt="image" src="https://github.com/user-attachments/assets/23d01c92-e3d7-44ff-89d5-dea607781ff0" />
-/>
+
 </p>
 
 <h1>- Microsoft 365 Administration Lab Environment</h1>
@@ -36,6 +36,86 @@ This tutorial outlines Exchange Online and Mailbox Management, Identity & Access
 - Azure Cloud Shell (Optional) for cloud-based scripting
 - User Scenarios (create 2–3 test users with roles)
 
+  👤 HOW TO CREATE A SINGLE USER
+✅ Steps:
+Sign in to Microsoft 365 Admin Center with your Global Admin or User Admin account.
+
+In the left-hand menu, click Users > Active users.
+
+<img width="1316" height="651" alt="image" src="https://github.com/user-attachments/assets/c43a45d8-a65b-45d0-8653-4c15082f110c" />
+
+Click “Add a user”.
+
+<img width="1092" height="572" alt="image" src="https://github.com/user-attachments/assets/345c831b-6d0e-4e71-a6e5-a5c6ef3f3270" />
+
+Fill in user details: First name, last name, Username (e.g., jane.doe@yourdomain.com)
+
+<img width="990" height="578" alt="image" src="https://github.com/user-attachments/assets/d826ad5f-82cd-4603-862b-17f7f031a18e" />
+
+Assign product license: Choose the Microsoft 365 license (e.g., Microsoft 365 Business Standard, E3).
+
+<img width="942" height="577" alt="image" src="https://github.com/user-attachments/assets/27abf5e3-cbf9-4734-95df-9c219842258b" />
+
+<img width="1049" height="579" alt="image" src="https://github.com/user-attachments/assets/33c97834-6279-484f-ba9e-a01eccc54da2" />
+
+Set password: Auto-generate or manually create a password.
+
+Option to require password change on first sign-in.
+
+Optional settings: Assign roles (e.g., User, Global admin)
+
+<img width="1167" height="569" alt="image" src="https://github.com/user-attachments/assets/aa1b4d32-34dd-4a0d-a5c3-299da039c7b2" />
+
+Set usage location (e.g., Canada)
+
+Click “Finish adding” to create the user.
+
+<img width="1164" height="618" alt="image" src="https://github.com/user-attachments/assets/abf605ac-549e-4c9b-bdb5-b6a4e1a296e0" />
+
+<img width="927" height="610" alt="image" src="https://github.com/user-attachments/assets/5672391d-7a20-47c5-a67c-82e4799e1672" />
+
+Copy/save the login credentials or send them via email.
+
+👥 To Create Multiple Users at Once (Bulk Upload):
+
+✅ Steps: In Admin Center
+
+<img width="1138" height="639" alt="image" src="https://github.com/user-attachments/assets/0257a6be-b1c7-490e-9867-c9939bbf780a" />
+
+go to Users > Active users.
+
+<img width="1254" height="622" alt="image" src="https://github.com/user-attachments/assets/7922283d-5fbf-43e7-9d68-a7c738e31475" />
+
+Click “Add multiple users” (next to “Add a user”).
+
+<img width="1281" height="632" alt="image" src="https://github.com/user-attachments/assets/b38abe05-db2a-49f5-ba5e-07de76dd150a" />
+
+<img width="1311" height="616" alt="image" src="https://github.com/user-attachments/assets/79b0bc3a-825c-4a70-9e3b-c55e23ac7fb6" />
+
+Download the CSV template provided.
+
+<img width="1270" height="632" alt="image" src="https://github.com/user-attachments/assets/18d9e93f-2e5e-4ec9-997d-4932df82d02d" />
+
+Fill in user info in the CSV:
+
+Username, First Name, Last Name, Display Name, Job Title, etc.
+
+Make sure to follow the format exactly as given.
+
+Upload the filled-in CSV file.
+
+Assign licenses in bulk to the users.
+
+<img width="1052" height="627" alt="image" src="https://github.com/user-attachments/assets/e315ad6a-b3cb-44fe-95bf-f4bc6266ef6b" />
+
+Set default password preferences for all new users.
+
+<img width="1220" height="625" alt="image" src="https://github.com/user-attachments/assets/b410c408-7f90-4c31-b669-15fe82316bd8" />
+
+Click “Next” > “Finish adding”.
+
+<img width="1332" height="617" alt="image" src="https://github.com/user-attachments/assets/5684c203-766c-4380-9724-2f5d9e393f0d" />
+
 <h2>1. Exchange Online and Mailbox Management </h2>
 
 Goal: Learn to manage mailboxes, distribution groups, and email policies in Exchange Online.
@@ -60,44 +140,22 @@ a.  SET UP EXCHANGE ONLINE IN YOUR MICROSOFT 365 ADMIN CENTER.
 
 - Navigate to Admin centers > Exchange.
 
-  <img width="1306" height="640" alt="image" src="https://github.com/user-attachments/assets/e45f254b-fbda-47ad-a8c3-72e13aa6e2ea" />
+  <img width="1258" height="639" alt="image" src="https://github.com/user-attachments/assets/0ca04d9c-065d-4991-88b5-81a7502d1fb4" />
 
 - In the Exchange Admin Center (EAC), you can now manage mailboxes, groups, policies, etc.
+   Shared mailboxes are ideal when multiple people need to access one mailbox. A company can create a shared mailbox for their website or a department to help when someone wants to contact them or make an inquiry, and the people who have access to this mailbox can see it. Lots of firms use shared mailboxes
 - Make sure licenses (e.g., Microsoft 365 E3/E5) are assigned to users so they can access Exchange Online.
 
+b.  CREATE A SHARED MAILBOXES.
 
+Go to Teams & groups > Shared mailboxes.
 
-b.  CREATE SHARED AND USER MAILBOXES.
+Click Add a shared mailbox.
 
-Configure mailbox permissions (Full Access, Send As).
+Provide a name and email address.
 
-Set mailbox limits and retention policies.
+Assign members to access it.
 
-Use PowerShell to automate mailbox creation.
-
-Configure email forwarding, mailbox delegation, and rules.
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
   2. Microsoft 365 Identity & Access Management Lab
 Goal: Manage users, groups, roles, and conditional access in Microsoft 365.
